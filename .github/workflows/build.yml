@@ -26,6 +26,22 @@ jobs:
         with:
           ref: "builds"
           path: "builds"
+        continue-on-error: true
+
+      - name: Create builds branch if not exists
+        run: |
+          cd $GITHUB_WORKSPACE/builds || mkdir -p $GITHUB_WORKSPACE/builds
+          cd $GITHUB_WORKSPACE/builds
+          git init
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git checkout --orphan builds 2>/dev/null || git checkout builds
+          touch .gitkeep
+          git add .gitkeep
+          git commit -m "Initialize builds branch" || true
+          git push -u origin builds --force 2>/dev/null || true
+        continue-on-error: true
 
       - name: Clean old builds
         run: rm $GITHUB_WORKSPACE/builds/*.cs3 || true
