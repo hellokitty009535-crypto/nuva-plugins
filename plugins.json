@@ -1,0 +1,22 @@
+[
+    {
+        "url": "https://raw.githubusercontent.com/hellokitty009535-crypto/nuva-plugins/builds/EduardoNovelasProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "EduardoNovelasProvider",
+        "internalName": "EduardoNovelasProvider",
+        "authors": [
+            "NuvaMovies"
+        ],
+        "description": "Telenovelas mexicanas, colombianas, venezolanas y brasile\u00f1as desde eduardonovelas.com",
+        "fileSize": 14265,
+        "repositoryUrl": "https://github.com/hellokitty009535-crypto/nuva-plugins",
+        "language": "es",
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "iconUrl": "https://www.google.com/s2/favicons?domain=eduardonovelas.com&sz=%size%",
+        "apiVersion": 1,
+        "fileHash": "sha256-37793bd523f53438084c6d0c2106ef4acc775ff11d009798b8f83b6458e1d99f"
+    }
+]
